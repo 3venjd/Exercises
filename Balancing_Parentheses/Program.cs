@@ -18,8 +18,6 @@ namespace Balancing_Parentheses
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             int r = getMin("()()");
 
             Console.WriteLine("the minimum value is " + r);
