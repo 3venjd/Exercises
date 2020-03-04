@@ -8,20 +8,33 @@ namespace FastBoxDelivery
     {
         public static long minTime(List<int> boxes)
         {
-            
+
             long acum = 0;
             int size = boxes.Count;
+            int max = boxes.Max();
+            int floor = 3;
 
-            for (int i = 0; i < size; i++)
+            if (boxes[0] == max)
             {
-                acum = acum + size - i;
-                for (int j = 0; j < size; j++)
+                acum = size * boxes[0] + boxes.Sum();
+            }
+            else
+            {
+
+                for (int i = 0; i < max; i++)
                 {
-                    if (boxes[j] != 0)
+                    acum = acum + floor; //TODO check how acumulate correctly
+                    for (int j = 0; j < size; j++)
                     {
-                        boxes[j] = boxes[j] - 1;
-                        acum = acum + 1;
+                        if (boxes[j] != 0)
+                        {
+                            boxes[j] = boxes[j] - 1;
+                            acum = acum + 1;
+                            
+                        }
                     }
+                    
+
                 }
             }
             return acum;
@@ -29,8 +42,8 @@ namespace FastBoxDelivery
         static void Main(string[] args)
         {
             List<int> box = new List<int>();
-            box.Add(1);
             box.Add(2);
+            box.Add(5);
             box.Add(3);
 
             Console.WriteLine("the list is:");
@@ -38,7 +51,7 @@ namespace FastBoxDelivery
 
             Console.Write("the minimum time required is ");
             Console.WriteLine(minTime(box));
-            
+
 
         }
     }
