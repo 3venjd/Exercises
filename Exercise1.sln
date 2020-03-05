@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balancing_Parentheses", "Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balancing_Elements", "Balancing_Elements\Balancing_Elements.csproj", "{196A382C-8017-4141-B9E6-3804319793C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divisibility_Of_Strings", "Divisibility_Of_Strings\Divisibility_Of_Strings.csproj", "{9CD76A89-0034-4EBA-88F3-063BC4C62CA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{196A382C-8017-4141-B9E6-3804319793C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{196A382C-8017-4141-B9E6-3804319793C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{196A382C-8017-4141-B9E6-3804319793C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD76A89-0034-4EBA-88F3-063BC4C62CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD76A89-0034-4EBA-88F3-063BC4C62CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD76A89-0034-4EBA-88F3-063BC4C62CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD76A89-0034-4EBA-88F3-063BC4C62CA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
