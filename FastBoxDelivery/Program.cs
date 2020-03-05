@@ -11,40 +11,30 @@ namespace FastBoxDelivery
 
             long acum = 0;
             int size = boxes.Count;
-            int max = boxes.Max();
-            int floor = 3;
 
-            if (boxes[0] == max)
+            for (int i = 0; i < size; i++)
             {
-                acum = size * boxes[0] + boxes.Sum();
-            }
-            else
-            {
-
-                for (int i = 0; i < max; i++)
+                if (boxes[i] != 0)
                 {
-                    acum = acum + floor; //TODO check how acumulate correctly
-                    for (int j = 0; j < size; j++)
+                    for (int j = 0; j < boxes[i]; j++)
                     {
-                        if (boxes[j] != 0)
-                        {
-                            boxes[j] = boxes[j] - 1;
-                            acum = acum + 1;
-                            
-                        }
+                        acum = acum + 2*(size - i);
                     }
-                    
-
+                    for (int k = 0; k < size; k++)
+                    {
+                        boxes[k] = boxes[k] - 1;
+                    }
                 }
             }
+
             return acum;
         }
         static void Main(string[] args)
         {
             List<int> box = new List<int>();
-            box.Add(2);
+            box.Add(1);
             box.Add(5);
-            box.Add(3);
+            box.Add(2);
 
             Console.WriteLine("the list is:");
             box.ForEach(x => Console.WriteLine(x));
