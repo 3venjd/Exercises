@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Balancing_Elements
 {
@@ -16,6 +17,8 @@ namespace Balancing_Elements
             {
                 aux = arr[i];
                 arr.RemoveAt(i);
+
+                
                 for (int j = 0; j < arr.Count; j++)
                 {
                     if ( j % 2 == 0)

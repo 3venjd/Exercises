@@ -9,23 +9,26 @@ namespace FastBoxDelivery
         public static long minTime(List<int> boxes)
         {
 
-            long acum = 0;
-            int size = boxes.Count;
-
-            for (int i = 0; i < size; i++)
+            //TODO WITHOUT BUCLES
+            long acum;
+            //if value is in the buttom
+            if (boxes.Max() == boxes[0])
             {
-                if (boxes[i] != 0)
-                {
-                    for (int j = 0; j < boxes[i]; j++)
-                    {
-                        acum = acum + 2*(size - i);
-                    }
-                    for (int k = 0; k < size; k++)
-                    {
-                        boxes[k] = boxes[k] - 1;
-                    }
-                }
+                acum = (boxes.Count() * boxes.Max()) + boxes.Sum();
             }
+            //when the value is in the top
+            else if (boxes.Max() == boxes.Last())
+            {
+                acum = boxes.Sum() * 2;
+            }
+            else
+            {
+                //Find the formula when the value is in the middle
+
+                // ???
+                acum = 1;
+            }
+
 
             return acum;
         }
@@ -33,8 +36,8 @@ namespace FastBoxDelivery
         {
             List<int> box = new List<int>();
             box.Add(1);
-            box.Add(5);
-            box.Add(2);
+            box.Add(8);
+            box.Add(3);
 
             Console.WriteLine("the list is:");
             box.ForEach(x => Console.WriteLine(x));
