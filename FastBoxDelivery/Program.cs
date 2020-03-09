@@ -23,10 +23,13 @@ namespace FastBoxDelivery
             }
             else
             {
-                //Find the formula when the value is in the middle
 
-                // ???
-                acum = 1;
+                //Find the formula when the value is in the middle
+                int max_value_index = boxes.IndexOf(boxes.Max());
+                var List_values_below_max = boxes.SkipLast(max_value_index);
+                acum = List_values_below_max.Sum(x => x * (List_values_below_max.ToList().IndexOf(x)+1)) + boxes.Sum();
+
+                
             }
 
 
@@ -35,9 +38,11 @@ namespace FastBoxDelivery
         static void Main(string[] args)
         {
             List<int> box = new List<int>();
-            box.Add(1);
-            box.Add(8);
-            box.Add(3);
+            box.Add(5);
+            box.Add(7);
+            box.Add(4);
+
+
 
             Console.WriteLine("the list is:");
             box.ForEach(x => Console.WriteLine(x));
